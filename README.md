@@ -38,7 +38,7 @@ Send `/start` to your bot and it should reply `Hello, world!`.
 
 ### Write Your Own Bot
 
-Change the code in `src/bot.ts` to write your own bot. See [grammY docs](https://grammy.dev/guide/getting-started.html) for more details.
+Change the code in `src/bot.ts` to write your own bot. See [grammY docs](https://grammy.dev/guide/basics.html) for more details.
 
 Non-bot-update requests will be handled in `src/nonBot.ts`. You can change it to write your own logic.
 
