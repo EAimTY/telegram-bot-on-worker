@@ -1,0 +1,36 @@
+{
+  "name": "telegram-bot-on-worker",
+  "version": "0.0.0",
+  "dependencies": {
+    "grammy": "^1.16.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230404.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^2.18.0"
+  },
+  "scripts": {
+    "publish": "wrangler publish"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "airbnb-base",
+      "airbnb-typescript/base"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ]
+  }
+}

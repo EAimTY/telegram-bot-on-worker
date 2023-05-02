@@ -1,0 +1,12 @@
+name = "telegram-bot-on-worker"
+main = "src/index.ts"
+compatibility_date = "2023-05-02"
+workers_dev = false
+
+# Declare a Cloudflare Worker KV namespace
+# See https://developers.cloudflare.com/workers/wrangler/workers-kv/
+# and https://developers.cloudflare.com/workers/runtime-apis/kv/
+#
+# [[kv_namespaces]]
+# binding = "<BINDING_NAME>"
+# id = "<KV_NAMESPACE_ID>"
