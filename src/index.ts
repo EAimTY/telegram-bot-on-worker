@@ -13,7 +13,7 @@ export default {
     return handleNonBotRequest(req, env);
   },
 
-  async scheduled(ctrl: ScheduledController, env: Env) {
+  async scheduled(ctrl: ScheduledController, env: Env): Promise<void> {
     const bot = new Bot(env.TELEGRAM_BOT_API_TOKEN);
     handleBotCronEvent(bot, env, ctrl);
   },
