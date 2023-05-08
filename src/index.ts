@@ -1,7 +1,6 @@
 import { Bot, webhookCallback } from 'grammy/web';
 import Env from './env';
-import handleBotUpdate from './bot';
-import handleNonBotRequest from './nonBot';
+import { handleBotCronEvent, handleBotUpdate, handleNonBotRequest } from './bot';
 
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
@@ -12,5 +11,10 @@ export default {
     }
 
     return handleNonBotRequest(req, env);
+  },
+
+  async scheduled(ctrl: ScheduledController, env: Env) {
+    const bot = new Bot(env.TELEGRAM_BOT_API_TOKEN);
+    handleBotCronEvent(bot, env, ctrl);
   },
 };
