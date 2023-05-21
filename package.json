@@ -12,7 +12,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "typescript": "^5.0.4",
-    "wrangler": "^2.18.0"
+    "wrangler": "^3.0.0"
   },
   "scripts": {
     "publish": "wrangler publish"
